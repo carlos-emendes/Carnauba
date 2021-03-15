@@ -379,7 +379,7 @@ class XRF_display(Display):
 
                 def hoverEvent(event): #funcao para obter o pixel do mouse
                  if event.isExit():
-                     image.setTitle("")
+
                      return
                  else:
                      pos = event.pos()
