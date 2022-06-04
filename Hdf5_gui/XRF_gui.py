@@ -3,7 +3,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QTabWidget, \
     QLabel, QWidget, QTableWidget, QTableWidgetItem, QAbstractItemView
 import matplotlib
-from PyQt5 import QtGui
+from PyQt5 import QtGui, QtWidgets
 import pyqtgraph as pg
 import numpy as np
 from Hdf5_gui.Carnauba_exp import hdf5File
@@ -76,7 +76,7 @@ class XRF_interface(QMainWindow):
 
 ###### FUNCOES DA ABA INTRO ######
     def Open_file(self): #Seleciona o arquivo HDF5
-        filename=QtGui.QFileDialog.getOpenFileName(self,'Select File')
+        filename=QtWidgets.QFileDialog.getOpenFileName(self,'Select File')
         if filename[0]!=[] and self.filename!=filename[0]:
             self.filename=filename[0]
             self.treeview.findHdf5TreeModel().clear()
